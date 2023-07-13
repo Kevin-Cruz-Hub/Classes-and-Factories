@@ -108,3 +108,23 @@ for(let i = 0; i < 2; i++){
 console.log(Gus)
 console.log(Timmy)
 // ===================================================================
+
+class Dinner{
+    constructor(appetizer, entree, dessert){
+        this.appetizer = appetizer || '',
+        this.entree = entree || ' ',
+        this.dessert = dessert || ''
+    }
+}
+class Chef{
+    constructor(name){
+        this.name = name
+    }
+    prepareDinner(appetizer, entree, dessert){
+        const dinner = new Dinner(appetizer,entree,dessert)
+        console.log(dinner)
+    }
+}
+let chef1 = new Chef('Kevin')
+chef1.prepareDinner('Dumplings','Ramen','Soup')
+chef1.prepareDinner('Fries','Pizza','ice cream')
